@@ -1,6 +1,6 @@
 # Proposed lab architecture
 
-**Planning diagram only.** A [VM inventory observation](../investigations/LAB-000-environment-readiness.md) is available with a screenshot. Guest configuration, network isolation, forwarding, and ingestion have not been verified.
+**Planning diagram only.** A [VM inventory observation](../investigations/LAB-000-environment-readiness.md) is available with a screenshot. Historical Wazuh alert data has since been [observed in Splunk](../investigations/LAB-000-telemetry-coverage.md). Guest configuration, network isolation, current forwarding health, and the exact transport path remain unverified.
 
 ```mermaid
 flowchart LR
