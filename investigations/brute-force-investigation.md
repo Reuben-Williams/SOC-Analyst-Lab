@@ -1,0 +1,29 @@
+# Repeated failed logons — investigation template
+
+**Status: NOT STARTED. No incident or findings asserted.**
+
+## Scope and trigger
+Case ID, lab-only assets, authorization, detection path and revision: TODO.
+
+## Initial hypothesis
+TODO. Explain what might have happened and what would disprove it.
+
+## Evidence and timeline
+| UTC timestamp | Evidence ID | Observed fact | Source / query revision |
+| --- | --- | --- | --- |
+| TODO | No evidence collected | Not assessed | TODO |
+
+## Investigation steps
+Record exact queries, time bounds, returned events and negative results. Correlate account, host, source and process context where available. Do not execute suspicious content.
+
+## Alternative explanations
+TODO: administrative activity, user error, incomplete telemetry, timestamp issues.
+
+## Assessment
+Disposition: NOT ASSESSED. Confidence: NOT ASSESSED. Supporting evidence and limitations: TODO.
+
+## Response recommendations
+TODO. Separate suggested actions from actions actually taken. No containment or remediation performed.
+
+## Lessons and validation
+TODO. Link validation record, sanitized screenshots and any query tuning. State what was personally executed and what was assisted.
