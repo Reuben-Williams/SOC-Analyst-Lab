@@ -1,29 +1,16 @@
-# Repeated failed logons — investigation template
+# Windows authentication detection exercise
 
-**Status: NOT STARTED. No incident or findings asserted.**
+**Completed:** synthetic threshold and successful-logon exclusion checks. **Not complete:** fresh Windows failed-logon collection and end-to-end alert validation.
 
-## Scope and trigger
-Case ID, lab-only assets, authorization, detection path and revision: TODO.
+On 2026-09-27, a 21-row Splunk in-memory fixture included ten failures for one synthetic account, nine for another, and two successful-logon controls (4624). Successful logons were excluded by the 4625 selection. Domain/account, host, source and fixed five-minute grouping produced the expected ten-versus-nine boundary behavior.
 
-## Initial hypothesis
-TODO. Explain what might have happened and what would disprove it.
-
-## Evidence and timeline
-| UTC timestamp | Evidence ID | Observed fact | Source / query revision |
+| Case | Count | Expected match | Actual |
 | --- | --- | --- | --- |
-| TODO | No evidence collected | Not assessed | TODO |
+| Synthetic positive | 10 | Yes | PASS |
+| Synthetic negative | 9 | No | PASS |
 
-## Investigation steps
-Record exact queries, time bounds, returned events and negative results. Correlate account, host, source and process context where available. Do not execute suspicious content.
+![Windows authentication fixture results](../evidence/screenshots/LAB-001-windows-auth-synthetic.png)
 
-## Alternative explanations
-TODO: administrative activity, user error, incomplete telemetry, timestamp issues.
+[Executed fixture](../splunk/windows-authentication-synthetic-validation.spl). The `192.0.2.10` address is reserved documentation data. No real authentication attempts were made by this query and no endpoint data was ingested. This tests the core logic of the original SPL starter, not its index/sourcetype mapping.
 
-## Assessment
-Disposition: NOT ASSESSED. Confidence: NOT ASSESSED. Supporting evidence and limitations: TODO.
-
-## Response recommendations
-TODO. Separate suggested actions from actions actually taken. No containment or remediation performed.
-
-## Lessons and validation
-TODO. Link validation record, sanitized screenshots and any query tuning. State what was personally executed and what was assisted.
+The historical coverage query found zero 4625 records in the Windows Wazuh subset. A local API-generated logon failure can lack a meaningful source IP, so it requires careful field review. Time-bucket boundaries, missing fields, distributed sources and low-volume attempts remain limitations. No brute-force attack, compromise, or containment is asserted. Execution and documentation were AI-assisted.

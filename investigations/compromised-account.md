@@ -1,29 +1,9 @@
-# Suspected account compromise — investigation template
+# Account-compromise triage — evidence-limited review
 
-**Status: NOT STARTED. No incident or findings asserted.**
+**Completed:** assessment of the existing authentication evidence. **No compromise determination or response action claimed.**
 
-## Scope and trigger
-Case ID, lab-only assets, authorization, detection path and revision: TODO.
+The [SSH review](LAB-005-historical-ssh-review.md) found 17 authentication-failure alerts in six five-minute source/account groups, none reaching ten. Six connection resets were not treated as password failures. A complete success/failure audit trail, new-account activity, session provenance, privilege changes and post-authentication behavior were not established.
 
-## Initial hypothesis
-TODO. Explain what might have happened and what would disprove it.
+Conclusion: insufficient evidence to determine account compromise. Plausible alternatives include user error and prior lab activity; actor intent is unverified. A zero threshold result does not establish that an account is safe.
 
-## Evidence and timeline
-| UTC timestamp | Evidence ID | Observed fact | Source / query revision |
-| --- | --- | --- | --- |
-| TODO | No evidence collected | Not assessed | TODO |
-
-## Investigation steps
-Record exact queries, time bounds, returned events and negative results. Correlate account, host, source and process context where available. Do not execute suspicious content.
-
-## Alternative explanations
-TODO: administrative activity, user error, incomplete telemetry, timestamp issues.
-
-## Assessment
-Disposition: NOT ASSESSED. Confidence: NOT ASSESSED. Supporting evidence and limitations: TODO.
-
-## Response recommendations
-TODO. Separate suggested actions from actions actually taken. No containment or remediation performed.
-
-## Lessons and validation
-TODO. Link validation record, sanitized screenshots and any query tuning. State what was personally executed and what was assisted.
+No account was disabled, no password was reset, and no session was revoked during this review. Recommended next steps: collect a controlled authentication sequence and verify the forwarding path, correlate successes and privilege changes, and reassess using the exact same UTC window. See the [incident assessment](../incident-reports/IR-001-compromised-user.md). Work was AI-assisted.
