@@ -2,11 +2,18 @@
 
 A growing security operations portfolio by Reuben Williams: detection hypotheses, repeatable investigations, incident reporting, and small analyst utilities.
 
-**Current status: starter portfolio. All detections are drafts and have not been run against lab telemetry. No completed investigations or incident outcomes are claimed.**
+**Current status: historical SSH and PowerShell reviews plus synthetic SPL tests are documented. Fresh endpoint tests, end-to-end alert validation, KQL, and Sigma validation remain pending. No compromise or remediation outcome is claimed.**
 
 ## Start here
 
-Latest observed progress: [LAB-000 environment readiness](investigations/LAB-000-environment-readiness.md), including a sanitized screenshot of the VM inventory. Detection execution is still pending.
+## Documented exercises
+
+- [Telemetry coverage and limitations](investigations/LAB-000-telemetry-coverage.md): actual source mapping and missing Windows events.
+- [Historical SSH review](investigations/LAB-005-historical-ssh-review.md): 17 failures in six groups; separate ten-versus-nine synthetic boundary test passed.
+- [Historical PowerShell review](investigations/LAB-002-historical-powershell-review.md): ten process events, zero pattern matches; four synthetic tests passed.
+- [Initial environment observation](investigations/LAB-000-environment-readiness.md): sanitized VM inventory screenshot.
+
+These exercises use existing Wazuh alerts and explicitly labeled in-memory fixtures. They do not represent fresh attack simulations or completed end-to-end detection deployment. Reports include actual screenshots and reproducible queries.
 
 1. Document the actual environment in [architecture](architecture/README.md). The diagram is a proposed design, not a verified deployment.
 2. Start with [repeated failed logons](detections/authentication/README.md). Confirm your log sources and field mappings before running its query.
@@ -26,7 +33,7 @@ Latest observed progress: [LAB-000 environment readiness](investigations/LAB-000
 | [Sentinel](sentinel-kql/README.md) | SecurityEvent KQL searches | Unvalidated |
 | [Sigma](sigma/README.md) | Portable experimental rules | Unvalidated |
 | [Python](scripts/python/README.md) / [PowerShell](scripts/powershell/README.md) | Local file SHA-256 utilities | See usage notes |
-| [Investigations](investigations/README.md) | Three blank investigation templates | Not started |
+| [Investigations](investigations/README.md) | Historical reviews, coverage findings, and blank templates | Partial; scope in each report |
 | [Incident reports](incident-reports/IR-001-compromised-user.md) | Blank response report | Not started |
 
 ## What this portfolio will demonstrate

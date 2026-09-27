@@ -27,4 +27,4 @@ Review every staged file and image before committing. Avoid broad staging comman
 - Internal relative Markdown links and requested directory presence were checked locally.
 - Python and PowerShell hashing utilities matched the known SHA-256 of `abc` and rejected a nonexistent file.
 - These checks do **not** validate SPL, KQL, Sigma conversion, ingestion, detection accuracy, or any lab incident.
-- All detection validation remains **NOT RUN**; screenshots and investigation results remain absent.
+- The original scaffold checks did not run detections. Subsequent historical reviews and synthetic SPL tests are documented in the [portfolio overview](README.md), with screenshots. Fresh endpoint and end-to-end validation remain pending.

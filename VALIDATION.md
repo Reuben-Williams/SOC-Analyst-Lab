@@ -2,6 +2,8 @@
 
 **Status: NOT RUN.** Copy this record for each lab exercise; unchecked items are not evidence of completion.
 
+This file is a blank template. Separate scoped results now exist for the [SSH historical review and synthetic threshold test](investigations/LAB-005-historical-ssh-review.md) and [PowerShell historical review and synthetic matching tests](investigations/LAB-002-historical-powershell-review.md). Neither establishes end-to-end deployment validation.
+
 - Detection ID / query path / commit: TODO
 - Date, time range, timezone (prefer UTC): TODO
 - Lab-only scope and authorization: TODO
