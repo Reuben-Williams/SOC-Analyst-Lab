@@ -23,3 +23,7 @@ An account creation event alone does not establish privilege escalation or compr
 
 ## Validation and evidence
 NOT RUN. Follow [validation](../../VALIDATION.md). Evidence: NONE. Thresholds and exclusions require lab-specific review.
+
+## Current exercise evidence
+
+The account-creation rule passed checks, conversion and synthetic positive/negative selection. Fresh event 4720 collection remains pending. See the [executed exercise](../../investigations/LAB-006-sigma-validation.md).
