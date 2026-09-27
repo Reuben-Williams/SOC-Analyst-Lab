@@ -1,0 +1,7 @@
+// DRAFT: requires 4688 command-line collection; not run in the lab.
+SecurityEvent
+| where TimeGenerated >= ago(24h)
+| where EventID == 4688
+| where NewProcessName endswith @"\powershell.exe" or NewProcessName endswith @"\pwsh.exe"
+| where CommandLine matches regex @"(?i)(^|\s)-(enc|encodedcommand)(\s|$)"
+| project TimeGenerated, Computer, SubjectAccount, NewProcessName, CommandLine

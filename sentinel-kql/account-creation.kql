@@ -1,0 +1,6 @@
+// DRAFT: review expected provisioning; not run in the lab.
+SecurityEvent
+| where TimeGenerated >= ago(24h)
+| where EventID == 4720
+| project TimeGenerated, Computer, SubjectAccount, TargetAccount
+| order by TimeGenerated asc

@@ -1,0 +1,8 @@
+// DRAFT: not run in the lab. Ten failures is an illustrative threshold.
+SecurityEvent
+| where TimeGenerated >= ago(24h)
+| where EventID == 4625
+| where isnotempty(TargetAccount) and isnotempty(IpAddress) and IpAddress != "-"
+| summarize Failures=count() by bin(TimeGenerated, 5m), Computer, TargetAccount, IpAddress
+| where Failures >= 10
+| order by Failures desc
