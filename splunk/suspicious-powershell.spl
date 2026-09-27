@@ -1,0 +1,3 @@
+index=lab_windows sourcetype="XmlWinEventLog:Security" EventCode=4688 earliest=-24h latest=now
+| where match(NewProcessName,"(?i)(^|\\\\)(powershell|pwsh)\\.exe$") AND match(CommandLine,"(?i)(^|\\s)-(enc|encodedcommand)(\\s|$)")
+| table _time Computer SubjectUserName NewProcessName CommandLine

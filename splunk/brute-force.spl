@@ -1,0 +1,7 @@
+index=lab_windows sourcetype="XmlWinEventLog:Security" EventCode=4625 earliest=-24h latest=now
+| where isnotnull(TargetUserName) AND isnotnull(IpAddress) AND IpAddress!="-" AND IpAddress!=""
+| eval lab_account=coalesce(TargetDomainName,"UNKNOWN")."/".TargetUserName
+| bin _time span=5m
+| stats count as failures by _time Computer lab_account IpAddress
+| where failures>=10
+| sort - failures
