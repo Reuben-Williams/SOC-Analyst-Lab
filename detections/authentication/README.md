@@ -23,3 +23,7 @@ This is a threshold heuristic, not proof of brute force. Buckets can split a bur
 
 ## Validation and evidence
 NOT RUN. Follow [validation](../../VALIDATION.md). Evidence: NONE. Thresholds and exclusions require lab-specific review.
+
+## Current exercise evidence
+
+Synthetic Windows failure threshold and successful-logon exclusion tests passed. Fresh event 4625 collection remains pending. See the [executed exercise](../../investigations/brute-force-investigation.md).
