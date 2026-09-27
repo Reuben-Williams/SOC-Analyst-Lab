@@ -1,6 +1,6 @@
 # Proposed lab architecture
 
-**Planning diagram only. Existing VM configuration, network isolation, forwarding, and ingestion have not been verified.**
+**Planning diagram only.** A [VM inventory observation](../investigations/LAB-000-environment-readiness.md) is available with a screenshot. Guest configuration, network isolation, forwarding, and ingestion have not been verified.
 
 ```mermaid
 flowchart LR
