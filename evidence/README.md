@@ -1,6 +1,6 @@
 # Evidence publishing guide
 
-A sanitized VM inventory screenshot is available in [LAB-000](../investigations/LAB-000-environment-readiness.md). No event data or detection-result screenshots have been collected. Store raw material outside Git or in ignored `local-only/`.
+Sanitized screenshots document the VM inventory, historical SSH and PowerShell review results, Windows telemetry coverage, and explicitly labeled synthetic tests. Refer to the [coverage assessment](../investigations/LAB-000-telemetry-coverage.md) and linked investigation reports. No raw event exports are published. Store raw material outside Git or in ignored `local-only/`.
 
 After review, place sanitized screenshots in `evidence/screenshots/` and reference them from the investigation. Suggested name: `LAB-001-query-results-YYYYMMDD.png`.
 
