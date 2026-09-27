@@ -6,6 +6,8 @@ A growing security operations portfolio by Reuben Williams: detection hypotheses
 
 ## Start here
 
+Latest observed progress: [LAB-000 environment readiness](investigations/LAB-000-environment-readiness.md), including a sanitized screenshot of the VM inventory. Detection execution is still pending.
+
 1. Document the actual environment in [architecture](architecture/README.md). The diagram is a proposed design, not a verified deployment.
 2. Start with [repeated failed logons](detections/authentication/README.md). Confirm your log sources and field mappings before running its query.
 3. Follow the [validation checklist](VALIDATION.md), recording positive and negative results, limitations, and the exact query revision.
