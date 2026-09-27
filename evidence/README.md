@@ -1,6 +1,6 @@
 # Evidence publishing guide
 
-No screenshots or real event data have been added. Store raw material outside Git or in ignored `local-only/`.
+A sanitized VM inventory screenshot is available in [LAB-000](../investigations/LAB-000-environment-readiness.md). No event data or detection-result screenshots have been collected. Store raw material outside Git or in ignored `local-only/`.
 
 After review, place sanitized screenshots in `evidence/screenshots/` and reference them from the investigation. Suggested name: `LAB-001-query-results-YYYYMMDD.png`.
 
