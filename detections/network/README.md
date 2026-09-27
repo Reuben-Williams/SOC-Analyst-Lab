@@ -1,11 +1,5 @@
-# LAB-004 — Outbound connection review
+# LAB-004 — Outbound network review
 
-**Status: PLANNED. No executable query or completed test is claimed.**
+Synthetic control testing is documented in the [network exercise](../../investigations/LAB-004-network-review.md). Live source mapping and baseline verification remain pending because no Sysmon network event 3 data was observed.
 
-Hypothesis: an unusual destination or port warrants investigation when compared to the lab's known baseline.
-
-Required source: choose Zeek connection logs or Sysmon event 3. Document source, destination, port, protocol, UTC time, and process mapping where available. Sysmon network logging depends on configuration.
-
-Query template: choose an explicit source and time range; group by lab host, destination and port; count connections; compare against a documented baseline; inspect the process and DNS context. Set a threshold only after observing benign lab traffic.
-
-False positives: updates, browsers, package managers, management tools. Limitations: NAT, incomplete capture, encryption, and absent baseline. A rare destination is not proof of command and control. Validation: NOT RUN. Evidence: NONE.
+The exercise flags five outbound TCP connections per five-minute group to a port outside an illustrative allowlist. This is a review heuristic, not proof of maliciousness. The allowlist is a teaching fixture, not a real environment baseline. See the report for screenshots, the executed query, false positives and completion criteria.
