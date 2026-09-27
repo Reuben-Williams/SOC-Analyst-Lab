@@ -1,3 +1,3 @@
 # Investigation workbench
 
-All documents here are blank templates. No investigation has been performed or closed. Copy a template, record actual observations, and link reviewed evidence. Keep a clear distinction between hypothesis, observation and conclusion.
+Files prefixed `LAB-000`, `LAB-002`, and `LAB-005` contain actual observations or historical reviews performed with AI assistance. Their scope and remaining validation gaps are explicit. The original brute-force, malware and compromised-account documents remain blank templates; no real compromise or response outcome is claimed. Keep a clear distinction between hypothesis, observation and conclusion.
