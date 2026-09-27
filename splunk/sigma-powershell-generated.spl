@@ -1,0 +1,1 @@
+data.win.system.eventID=1 data.win.system.providerName="Microsoft-Windows-Sysmon" index="wazuh" sourcetype="wazuh:alert:json" agent.name="WIN-ENDPOINT" data.win.eventdata.image IN ("*\\powershell.exe", "*\\pwsh.exe") data.win.eventdata.commandLine IN ("* -enc *", "* -encodedcommand *")

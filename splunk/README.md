@@ -12,4 +12,12 @@ These examples assume extracted fields `EventCode`, `Computer`, `TargetUserName`
 
 Use a short lab time range first. No saved alerts or automated response actions are installed.
 
+## Additional completed fixture tests
+
+- [Windows authentication](../investigations/brute-force-investigation.md): ten-versus-nine failures and successful-logon exclusion.
+- [Network controls](../investigations/LAB-004-network-review.md): outbound review, baseline and inbound controls.
+- [Generated Sigma predicates](../investigations/LAB-006-sigma-validation.md): account creation and encoded PowerShell with negative controls.
+
+Each report links the exact executed SPL and genuine application screenshots. These fixtures validate only the documented inputs, not fresh endpoint collection or a scheduled alert.
+
 [Official SPL reference](https://docs.splunk.com/Documentation/SplunkCloud/latest/SearchReference/)

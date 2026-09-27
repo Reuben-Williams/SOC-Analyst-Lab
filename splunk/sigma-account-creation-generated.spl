@@ -1,0 +1,1 @@
+data.win.system.providerName="Microsoft-Windows-Security-Auditing" index="wazuh" sourcetype="wazuh:alert:json" agent.name="WIN-ENDPOINT" data.win.system.eventID=4720
