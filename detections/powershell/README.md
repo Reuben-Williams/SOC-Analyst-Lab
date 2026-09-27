@@ -23,3 +23,7 @@ Encoding is not proof of malicious intent. Shortened switches and other interpre
 
 ## Validation and evidence
 NOT RUN. Follow [validation](../../VALIDATION.md). Evidence: NONE. Thresholds and exclusions require lab-specific review.
+
+## Current exercise evidence
+
+Historical PowerShell review and synthetic controls are documented. Fresh endpoint collection remains pending. See the [executed exercise](../../investigations/LAB-002-historical-powershell-review.md).
