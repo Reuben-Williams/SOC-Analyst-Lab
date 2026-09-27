@@ -1,7 +1,5 @@
-# Experimental Sigma rules
+# Sigma detection exercises
 
-These original starter rules are **experimental and unvalidated**. They have not been compiled with a backend or executed against lab logs. Choose a backend and processing pipeline matching your telemetry; generic `Image` and `CommandLine` fields require mapping.
+Both rules passed official rule checks and conversion using the local [Wazuh pipeline](wazuh-splunk-pipeline.yml). The generated SPL predicates selected the expected cases in Splunk synthetic tests. See [LAB-006](../investigations/LAB-006-sigma-validation.md) for evidence, exact commands, limitations and screenshots.
 
-The PowerShell rule is a simple substring heuristic and does not cover every switch spelling. Account creation is informational. Neither rule is proof of compromise. Review false positives and follow the validation checklist before claiming coverage.
-
-[Sigma specification](https://sigmahq.io/sigma-specification/specification/sigma-rules-specification.html) · [Processing pipelines](https://sigmahq.io/docs/digging-deeper/pipelines)
+Status remains `experimental`: fresh endpoint and scheduled-alert validation are not complete. Pinned validation tools are in [requirements-validation.txt](requirements-validation.txt). Install them into a separate environment; do not commit dependencies or credentials.
