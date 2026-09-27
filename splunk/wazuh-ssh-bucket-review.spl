@@ -1,0 +1,7 @@
+index=wazuh sourcetype="wazuh:alert:json" agent.name="LINUX-ENDPOINT" rule.id=5760 earliest=-30d latest=now
+| bin _time span=5m
+| stats count as failures by _time agent.name data.srcip data.dstuser
+| sort _time
+| streamstats count as group_id
+| eval threshold_met=if(failures>=10,"yes","no"), bucket_epoch=_time
+| table group_id bucket_epoch failures threshold_met

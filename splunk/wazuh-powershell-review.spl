@@ -1,0 +1,5 @@
+index=wazuh sourcetype="wazuh:alert:json" agent.name="WIN-ENDPOINT" data.win.system.providerName="Microsoft-Windows-Sysmon" data.win.system.eventID=1 earliest=-30d latest=now
+| eval image=mvindex('data.win.eventdata.image',0), command=mvindex('data.win.eventdata.commandLine',0)
+| where like(lower(image),"%powershell.exe") OR like(lower(image),"%pwsh.exe")
+| eval commandline_present=if(isnotnull(command),"present","missing"), encoded_indicator=if(match(command,"(?i)(^|\\s)-(enc|encodedcommand)(\\s|$)"),"matched","not matched")
+| stats count by commandline_present encoded_indicator

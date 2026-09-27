@@ -1,0 +1,7 @@
+| makeresults count=19
+| streamstats count as n
+| eval scenario=if(n<=10,"SYNTHETIC-positive-10","SYNTHETIC-negative-9"), _time=1788333600, lab_account=scenario, source="TEST-SOURCE", agent="TEST-HOST"
+| bin _time span=5m
+| stats count as failures by _time scenario lab_account source agent
+| eval expected=if(scenario="SYNTHETIC-positive-10",1,0), actual=if(failures>=10,1,0), result=if(expected=actual,"PASS","FAIL")
+| table scenario failures expected actual result
