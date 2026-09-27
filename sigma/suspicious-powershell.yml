@@ -1,0 +1,25 @@
+title: PowerShell Encoded Command Lab Starter
+id: 63fd897e-5763-493e-ae74-b6965bb0fd12
+status: experimental
+description: Unvalidated lab heuristic for encoded command switches; not proof of malicious intent.
+author: Reuben Williams (AI-assisted starter)
+date: 2026-09-27
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection_image:
+    Image|endswith:
+      - '\powershell.exe'
+      - '\pwsh.exe'
+  selection_switch:
+    CommandLine|contains:
+      - ' -enc '
+      - ' -encodedcommand '
+  condition: selection_image and selection_switch
+falsepositives:
+  - Authorized administration and deployment scripts
+level: low
+tags:
+  - attack.execution
+  - attack.t1059.001

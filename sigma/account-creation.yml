@@ -1,0 +1,16 @@
+title: Windows User Account Creation Lab Review
+id: 2b23727d-489b-4b8d-a91b-bfaf320104e8
+status: experimental
+description: Unvalidated informational review of account creation, not a compromise verdict.
+author: Reuben Williams (AI-assisted starter)
+date: 2026-09-27
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4720
+  condition: selection
+falsepositives:
+  - Expected account provisioning
+level: informational
